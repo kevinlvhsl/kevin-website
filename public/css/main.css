@@ -1,0 +1,225 @@
+@charset 'utf-8';
+/*banner轮播区域*/
+.main .banner {
+	position: relative;
+	height: 600px;
+	overflow: hidden;
+}
+/*图片的ul*/
+.banner .pic-box{
+	width: 100%;
+
+}
+.banner .pic-box li {
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	-webkit-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+}
+.banner .pic-box li:first-child {
+	opacity: 1;
+}
+.pic img {
+	width: 100%;
+	height: 100%;
+}
+.banner .c-btn {
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	background-color: rgba(0,0,0,.2);
+}
+.c-btn .iconfont {
+	position: absolute;
+	top: 20px ;
+	left:30px;
+	font-size: 40px;
+	color: #56ABE4;
+}
+.swipe-left {
+	left: 0;
+}
+.swipe-right {
+	right: 0;
+}
+
+/*技术分类区域*/
+.main .category {
+	height: 100px;
+}
+.category .technology {
+	width: 100%;
+	-webkit-box-sizing:border-box;
+	background-color: red;
+}
+.category .technology .t-item {
+	position: relative;
+	margin-left: 4%;
+	width: 22%;
+	height: 100px;
+	float: left;
+	line-height: 100px;
+	overflow: hidden;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #ECEBE5;
+}
+.t-item span {
+	color: #A4A4A4;
+}
+.technology .t-item:nth-child(1){
+	margin-left: 0;
+}
+.technology .t-item i {
+	-webkit-transition: 500ms ease-in-out;
+	-moz-transition: 500ms ease-in-out;
+	-o-transition: 500ms ease-in-out;
+	transition: 500ms ease-in-out;
+	font-size: 25px;
+	color: #364052;
+}
+.technology .t-item i::after{
+	content: '';
+	position: absolute;
+	right: -14px;
+	top: 50%;
+	margin-top: -7px;
+	border-style: solid;
+	border-width: 7px;
+}
+.technology .t-item:nth-child(1) i {
+	margin-left: 0;
+	background-color: #FF7020;
+}
+.technology .t-item:nth-child(1) i::after {
+	border-color: transparent transparent transparent #ff7020;
+}
+.technology .t-item:nth-child(2) i {
+	background-color: #FFC320;
+}
+.technology .t-item:nth-child(2) i::after {
+	border-color: transparent transparent transparent #FFC320;
+}
+.technology .t-item:nth-child(3) i {
+	background-color: #51D237;
+}
+.technology .t-item:nth-child(3) i::after {
+	border-color: transparent transparent transparent #51D237;
+}
+.technology .t-item:nth-child(4) i {
+	background-color: #0FA8BF;
+}
+.technology .t-item:nth-child(4) i::after {
+	border-color: transparent transparent transparent #0FA8BF;
+}
+.technology .t-item i {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: -95%;
+}
+
+.technology .t-item:hover i{
+	left: -5%;
+}
+
+
+/*联系方式*/
+.contact-wrap .contact-list {
+	width: 100%;
+	-webkit-box-sizing:border-box;
+	background-color: red;
+}
+.contact-wrap .contact-list .con-item {
+	position: relative;
+	margin-left: 5%;
+	width: 30%;
+	height: 100px;
+	float: left;
+	line-height: 100px;
+	overflow: hidden;
+	cursor: pointer;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #fff;
+}
+.con-item strong {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+}
+
+.contact-list .con-item:nth-child(1){
+	margin-left: 0;
+}
+/*悬停 事件效果*/
+.con-item:hover .item-down {
+	top: 0;
+}
+.con-item .iconfont {
+	font-size: 30px;
+}
+
+.con-item .item-up {
+	color: #D4D4D4;
+}
+.con-item .item-down {
+	position: absolute;
+	left: 0;
+	top: 90%;
+	-webkit-transition:500ms ease-in-out;
+	-moz-transition: 500ms ease-in-out;
+	-o-transition: 500ms ease-in-out;
+	transition:500ms ease-in-out;
+}
+.con-item strong i {
+	display: inline-block;
+	width: 30%;
+}
+.con-item strong span {
+	display: inline-block;
+	width: 70%;
+}
+.con-item:nth-child(1) .item-up .icon-user {
+	color: #5FA743;
+}
+.con-item:nth-child(1) .item-down .icon-user {
+	color: #fff;
+	background-color: #5FA743;
+}
+.con-item:nth-child(1) .item-down span {
+	color: #5FA743;
+	background-color: #ECEBE5;
+}
+.con-item:nth-child(2) .item-up .icon-qq {
+	color: #40AABD;
+}
+.con-item:nth-child(2) .item-down .icon-qq {
+	color: #fff;
+	background-color: #40AABD;
+}
+.con-item:nth-child(2) .item-down span {
+	color: #40AABD;
+	background-color: #ECEBE5;
+}
+.con-item:nth-child(3) .item-up .icon-mail {
+	color: #DB9251;
+}
+.con-item:nth-child(3) .item-down .icon-mail {
+	color: #fff;
+	background-color: #DB9251;
+}
+.con-item:nth-child(3) .item-down span {
+	color: #DB9251;
+	background-color: #ECEBE5;
+}
+/*中间主体区域结束*/
